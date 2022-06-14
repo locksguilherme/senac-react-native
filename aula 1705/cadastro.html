@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <style>
+        fieldset{
+            width: 250px;
+            margin: auto;
+            border-radius: 5px;
+        }
+        legend{
+            margin: auto;
+            color: white;
+        }
+        label{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+        }
+        input{
+            width: 250px;
+        }
+        button{
+            margin-left: 25px;
+            width: 200px;
+            background-color:white ;
+            color:black;
+            border-radius: 7px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 15px;
+        }
+        button:hover{
+            background-color: black;
+            color: white;
+        }
+     @media screen and(min-width: 480){
+            fieldset{
+            width: 600px;
+            margin: auto;
+            border-radius: 5px;
+        }
+        legend{
+            margin: auto;
+            color: white;
+        }
+        label{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+        }
+        input{
+            width: 600px;
+        }
+        button{
+            margin-left: 200px;
+            width: 200px;
+            background-color:white ;
+            color:black;
+            border-radius: 7px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 15px;
+        }
+        button:hover{
+            background-color: black;
+            color: white;
+        }
+    }
+    </style>
+</head>
+<body>
+    <fieldset>
+        <legend>Dados Pessoais:</legend><br>
+        <label>Nome:</label><br>
+        <input type="text" class="nome"/><br><br>
+        <label>Sobrenome:</label><br>
+        <input type="text" class="sobrenome"/><br><br>
+        <label>Data de Nascimento:</label><br>
+        <input type="date"/><br><br>
+        <label>CPF:</label><br>
+        <input type="text" class="cpf"/>
+    </fieldset><br>
+
+    <fieldset>
+        <legend>Dados de Endereço:</legend><br>
+        <label>Rua / Número:</label><br>
+        <input type="text" /><br><br>
+        <label>Bairro:</label><br>
+        <input type="text"/><br><br>
+        <label>Cidade:</label><br>
+        <input type="text"/><br><br>
+        <label>CEP:</label><br>
+        <input type="text"/><br><br>
+        <label>Estado:</label><br>
+        <input type="text"/>
+    </fieldset><br>
+
+    <fieldset>
+        <legend>Dados de Contato:</legend><br>
+        <label>Fone:</label><br>
+        <input type="text"/><br><br>
+        <label>Email:</label><br>
+        <input type="text"/><br><br>
+        <label>Redes Sociais:</label><br>
+        <input type="text"/><br><br>
+        <button><i class="material-icons">save</i>Salvar</button>
+    </fieldset>
+</body>
+</html>

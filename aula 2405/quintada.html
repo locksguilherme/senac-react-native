@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            width: 400px;
+            margin: auto;
+            
+        }
+
+        input {
+            width: 100%;
+            margin-top: 5px;
+            background-color: lightskyblue;
+            color: black;
+            border-radius: 8px;
+        }
+
+        body {
+            background-color: lightblue;
+            color: darkblue;
+        }
+
+        button {
+            color: darkblue;
+            background-color: lightskyblue;
+            border-radius: 5px;
+            margin-top: 5px;
+            margin-left: 110px;
+            width: 200px;
+        }
+
+        button:hover {
+            color:lightskyblue;
+            background-color: darkblue;
+            border-radius: 5px;
+        }
+
+        .lista {
+            display: inline-flex;
+            align-items: center;
+        }
+
+        table{
+            margin: auto;
+            
+        }
+        #dadosparagrafo{
+            margin-left: 175px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <label>Descrição</label>
+        <input type="text" id="descricao" placeholder="Informe descrição do produto" />
+
+        <label>Preço</label>
+        <input type="text" id="preco" placeholder="Informe preço do produto" />
+
+        <label>Estoque</label>
+        <input type="text" id="estoque" placeholder="Informe estoque do produto" />
+
+        <div>
+            <button onclick="comoMostrar()">Salvar dados</button>
+        </div>
+        <label class="lista2">Ativar/Desativar lista</label>
+        <div class="lista">
+            <input onclick="mostraresconder()" type="checkbox" id="lista" />
+        </div>
+        <table>
+            <thead>
+                <tr>
+                    <th>Descrição</th>
+                    <th>Preço</th>
+                    <th>Estoque</th>
+                </tr>
+            </thead>
+            <tbody id="dados">
+
+            </tbody>
+        </table>
+        <div id="dadosparagrafo">
+            
+        </div>
+    </div>
+    <script>
+        //validar dados
+        var produtos = []
+        function add(callback) {
+
+            //atribui valores para o objeto
+            var obj = {
+                descricao:
+                    document.getElementById("descricao").value,
+                preco:
+                    document.getElementById("preco").value,
+                estoque:
+                    document.getElementById("estoque").value
+            }
+            if (obj.descricao == '') {
+                alert('Informe a descrição!')
+                document.getElementById("descricao").focus()
+                return
+            }
+            if (obj.preco == '') {
+                alert('Informe o preço!')
+                document.getElementById("preco").focus()
+                return
+            }
+            if (obj.estoque == '') {
+                alert('Informe o estoque!')
+                document.getElementById("estoque").focus()
+                return
+            }
+            //colocar objeto no array produtos
+            produtos.push(obj)
+
+            limpar()
+            callback()
+        }
+        function comoMostrar() {
+            if (document.getElementById("lista").checked){
+                add(verDadosparag)    
+            }
+            else{
+                add(verDados)            
+            }
+        }
+        function mostraresconder(){
+            if (document.getElementById("lista").checked){
+                document.getElementById("dadosparagrafo").style = "display: block"
+                document.getElementsByTagName("table")[0].style = "display: none"
+                verDadosparag()
+            }
+            else{
+                document.getElementById("dadosparagrafo").style = "display: none"
+                document.getElementsByTagName("table")[0].style = "display: block margin:auto"
+                verDados()
+            }
+        }
+
+        function verDados() {
+            var linhas = ""
+            for (let i = 0; i < produtos.length; i++) {
+                linhas += `<tr>
+                <td>${produtos[i].descricao}</td>
+                <td>${produtos[i].preco}</td>
+                <td>${produtos[i].estoque}</td>
+                </tr>`
+            }
+            document.getElementById("dados").innerHTML = linhas
+        }
+        function verDadosparag() {
+            var linhas = ""
+            for (let i = 0; i < produtos.length; i++) {
+                linhas += `<p>${produtos[i].descricao} ${produtos[i].preco} ${produtos[i].estoque}</p>`
+            }
+            document.getElementById("dadosparagrafo").innerHTML = linhas
+        }
+
+
+
+        function limpar() {
+            document.getElementById("descricao").value = ""
+            document.getElementById("preco").value = ""
+            document.getElementById("estoque").value = ""
+        }
+    </script>
+</body>
+
+</html>

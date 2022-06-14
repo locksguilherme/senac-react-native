@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div>
+        <Label>Digite uma fruta</Label>
+        <input type="text" id="fruta" placeholder="Digite uma fruta" />
+    </div>
+
+    <button onclick="gravar()">Salvar</button>
+   
+    <script>
+        var frutas = []
+
+        function gravar(){
+            var fruta = document.getElementById("fruta").value
+            frutas.push(fruta)
+            localStorage.setItem("frutas", frutas)
+        }
+
+    </script>
+</body>
+
+</html>
