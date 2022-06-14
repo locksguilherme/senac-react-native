@@ -1,0 +1,37 @@
+git init - criar um repositorio local
+git add "nome_da_pasta.algumacoisa" - adicionar arquivos
+git commit -m "colocar mensagem"
+git branch -M main
+git remote add origin - vincular
+git push -u origin
+git remote add origin
+https://github.com/wendelltteske/senac-react-native.git
+
+//inicializa um repositório local
+>git init
+
+//cria uma branch local
+>git branch -M main
+
+//conecta um repositório local a um remoto
+>git remote add origin
+https://github.com/wendelltteske/senac-react-native.git
+
+//adiciona arquivos ao commit
+>git add <arquivos>
+
+//efetua o commit no repositório local
+git commit -m "Primeiro commit"
+
+//transfere os arquivos comitados localmente para o remoto
+>git push -u origin main
+
+//verifica qual repositório está conectado
+git remote -v
+
+//remover commit
+>git rm <arquivo>
+
+>git status
+
+>git add . - adicionar todos os arquivos não commitados
