@@ -18,6 +18,7 @@
         <label for="fone">Fone</label>
         <input type="text" id="fone" placeholder="Informe fone" /><br>
         <button onclick="alterar()">Editar</button>
+        <button onclick="pesquisa()">pesquisa</button>
     </div>
     <script>
         const urlParams = new URLSearchParams(window.location.search);
@@ -25,7 +26,16 @@
         document.getElementById("idselecionado").value = idselecionado
         //document.getElementById("nome").value = urlParams.get("nome")
 
-
+        function pesquisar() {
+            var idpesquisa = document.getElementById("idcliente").value
+            fetch(`http://localhost:3000/clientes/${idpesquisa}`)
+                .then(data => data.json())
+                .then(result => {
+                    document.getElementById("nome").value = result.nome
+                    document.getElementById("email").value = result.email
+                    document.getElementById("fone").value = result.fone
+                })
+        }
 
         function alterar() {
             const cliente = {
