@@ -1,4 +1,17 @@
 {
-  "clientes": [],
+  "clientes": [
+    {
+      "nome": "",
+      "email": "",
+      "fone": "123123",
+      "id": 1
+    },
+    {
+      "nome": "dasdasd",
+      "email": "dasdasdsad",
+      "fone": "123",
+      "id": 2
+    }
+  ],
   "options": []
 }

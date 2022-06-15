@@ -86,17 +86,6 @@
 
             </tbody>
         </table>
-        <div id="formAlterar">
-            <label>ID</label>
-            <input type="text" id="idselecionado" />
-            <label for="nome">Nome</label>
-            <input type="text" id="nome" placeholder="Informe nome" />
-            <label for="email">Email</label>
-            <input type="text" id="email" placeholder="Informe email" />
-            <label for="fone">Fone</label>
-            <input type="text" id="fone" placeholder="Informe fone" /><br>
-            <button onclick="alterar()">Editar</button>
-        </div>
     </fieldset>
 
     <script>
@@ -112,7 +101,7 @@
                         linha += `<td> ${lista[i].email}</td>`
                         linha += `<td> ${lista[i].fone}</td>`
                         linha += `<td> <button onclick="excluir(${lista[i].id})">excluir</button> </td>`
-                        linha += `<td> <button onclick="selecionaItem(${lista[i].id})">editar</button> </td>`
+                        linha += `<td> <a href= 'editarcliente.html?idselecionado=${lista[i].id}'> <button>editar</button></a> </td>`
                         linha += '</tr>'
                     }
                     document.getElementsByTagName("tbody")[0].innerHTML = linha
@@ -124,41 +113,6 @@
                 .then(data => data.json())
                 .then(cli => alert('Cliente excluido com sucesso'))
 
-        }
-
-        function selecionaItem(item) {
-            document.getElementById("formAlterar").style.display = 'block'
-            document.getElementById("idselecionado").value = item
-            fetch(`http://localhost:3000/clientes/${item}`)
-                .then(data => data.json())
-                .then(result => {
-                    document.getElementById("nome").value = result.nome
-                    document.getElementById("email").value = result.email
-                    document.getElementById("fone").value = result.fone
-                })
-        }
-
-        function alterar() {
-            const cliente = {
-                nome: "",
-                email: "",
-                fone: ""
-            }
-
-            cliente.nome = document.getElementById("nome").value
-            cliente.email = document.getElementById("email").value
-            cliente.fone = document.getElementById("fone").value
-
-            const options = {
-                method: 'PUT',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify(cliente)
-            }
-
-            var idselecionado = document.getElementById("idselecionado").value
-            fetch(`http://localhost:3000/clientes/${idselecionado}`, options)
-                .then(data => data.json())
-                .then(cli => alert('Cliente alterado com sucesso'))
         }
     </script>
 
