@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .dropdown {
+            display: block;
+            background-color: orange;
+        }
+
+        .dropdown:active .dropdown-content {
+            display: block;
+        }
+
+        .dropdown-content {
+            display: none;
+            background-color: orangered;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="dropdown">
+        <button id="botao" onclick="mostrar()" >Ola</button>
+        <div class="dropdown-content" id="conteudo">
+            conteudo escondido
+        </div>
+    </div>
+    <script>
+        function mostrar() {
+            
+            if (document.getElementById("conteudo").style.display == "flex"){
+                document.getElementById("conteudo").style.display = "none"
+            }else{
+                document.getElementById("conteudo").style.display = "flex"
+            }
+           
+            
+        }
+        
+    </script>
+</body>
+
+
+</html>

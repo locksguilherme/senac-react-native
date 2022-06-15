@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>Churrasco da rapaziada</p>
+    <input id="nmrpessoas" text="number" placeholder="Número de pessoas" />
+    <br>
+    <input id="gpessoas" text="number" placeholder="Gramas por pessoa" />
+    <br>
+    <input id="tipocarne" text="text" placeholder="Tipo de carne" />
+    <br>
+    <input id="preço" text="number" placeholder="Preço por kg" />
+    <br>
+    <button onclick="calculo()">Calcular</button>
+    <hr>
+    <p id="resultadocalculoqntd"></p><p id="resultadocalculodinheiro"></p>
+    
+    <br>
+    
+    
+    <script>
+        function calculo(){
+            var nmrpessoas = document.getElementById("nmrpessoas").value
+            if (nmrpessoas == ''){
+                alert("Digite o número de pessoas")
+                document.getElementById("nmrpessoas").focus()
+                return
+            }
+            var gpessoas = document.getElementById("gpessoas").value
+            if (gpessoas == ''){
+                alert("Digite o número de gramas por pessoas")
+                document.getElementById("gpessoas").focus()
+                return
+            }
+            var tipocarne = document.getElementById("tipocarne").value
+            if (tipocarne == ''){
+                alert("Digite o tipo de carne")
+                document.getElementById("tipocarne").focus()
+                return
+            }
+            var preço = document.getElementById("preço").value
+            if (preço == ''){
+                alert("Digite o preço")
+                document.getElementById("preço").focus()
+                return
+            }
+            var resultadocalculoqntd = (nmrpessoas * gpessoas) / 1000 
+            var resultadocalculodinheiro = resultadocalculoqntd * preço  
+            document.getElementById("resultadocalculoqntd").innerHTML = `Quantidade a ser comprada ${resultadocalculoqntd} Kg e você gastará ${resultadocalculodinheiro} reais`
+
+            //document.getElementById("resultadocalculoqntd").value = nmrpessoas*gpessoas
+        
+            //document.getElementById("resultadocalculodinheiro").value = resultadocalculoqntd/preço
+
+        }
+    </script>
+    
+</body>
+</html>
