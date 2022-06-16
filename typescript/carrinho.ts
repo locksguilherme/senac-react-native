@@ -1,11 +1,18 @@
-interface Icarrinho{
-    produto: string
-    valoremRS: number
-    qtd: number
+interface Icarrinho {
+    id: number
+    
 }
 
-var carrinho: Icarrinho ={produto:'', valoremRS:0, qtd:0}
+interface produtos{
+    qtd: number
+    valor: number
+    descricao: string
+}
+
+var carrinho: Icarrinho = {}
 
 carrinho.produto = "arroz"
 carrinho.qtd = 2
 carrinho.valoremRS = 11
+
+console.log(carrinho)
