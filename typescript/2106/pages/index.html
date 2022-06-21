@@ -9,22 +9,37 @@
 </head>
 
 <body>
+    
     <input type="number" id="n1" placeholder="informe numero" />
     <input type="number" id="n2" placeholder="informe numero" />
     <button onclick="soma()">somar</button>
     <button onclick="subtrai()">subtrair</button>
+    <button onclick="divide()">dividir</button>
+    <button onclick="multiplica()">multiplicar</button>
 
     <script>
-        function soma(){
+        function soma() {
             var n1 = parseInt(document.getElementById("n1").value)
             var n2 = parseInt(document.getElementById("n2").value)
             var retorno = somar(n1, n2)
             alert(retorno)
         }
-        function subtrai(){
+        function subtrai() {
             var n1 = parseInt(document.getElementById("n1").value)
             var n2 = parseInt(document.getElementById("n2").value)
             var retorno = subtrair(n1, n2)
+            alert(retorno)
+        }
+        function divide() {
+            var n1 = parseInt(document.getElementById("n1").value)
+            var n2 = parseInt(document.getElementById("n2").value)
+            var retorno = dividir(n1, n2)
+            alert(retorno)
+        }
+        function multiplica() {
+            var n1 = parseInt(document.getElementById("n1").value)
+            var n2 = parseInt(document.getElementById("n2").value)
+            var retorno = multiplicar(n1, n2)
             alert(retorno)
         }
 
