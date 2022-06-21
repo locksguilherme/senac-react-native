@@ -1,6 +1,8 @@
 "use strict";
-var carrinho = { produto: '', valoremRS: 0, qtd: 0 };
-carrinho.produto = "arroz";
-carrinho.qtd = 2;
-carrinho.valoremRS = 11;
+/*interface produtos{
+    qtd: number
+    valor: number
+    descricao: string
+}*/ /;
+var carrinho = { id: 1, produto, [qtd]: 2, valor: 29, descricao: "arroz branco" };
 console.log(carrinho);
