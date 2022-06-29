@@ -12,4 +12,12 @@ class Notebook extends Computador {
         return 500;
     }
 }
-let cp1 = new Notebook();
+class Tablet extends Computador {
+    getCapacidadeProcessamento() {
+        return 200;
+    }
+}
+let cp1;
+cp1 = new Notebook();
+let cp2;
+cp2 = new Tablet();
