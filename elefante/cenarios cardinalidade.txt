@@ -1,0 +1,9 @@
+cenario 1
+Em um estacionamento um cliente pode ter um carro
+R - > em cardinalidade 1:1 agrupa todos os atributos em uma unica entidade
+cenario 2
+Em um estacionamento um cliente pode ter mais de um carro
+R - > em cardinalidade 1:N a chave estrangeira é criada na entidade fraca (aquela que tem N)
+cenario 3
+Em um estacionamento um cliente pode ter mais de um carro, e um carro pode ter mais de um cliente
+R - > em cardinalidade N:N é criado uma entidade associativa que vai fazer a ligação entre as tuplas

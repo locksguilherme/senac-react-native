@@ -1,0 +1,23 @@
+create table carro3(
+	placa varchar(7),
+	id serial primary key,
+	carronome varchar(30)
+);
+
+insert into carro3(placa,carronome)
+values('mkn4565', 'celta');
+
+insert into carro3(placa,carronome)
+values('mkn3365', 'kombi');
+
+insert into carro3(placa,carronome)
+values('mkn4165', 'fox');
+
+insert into carro3(placa)
+values('mkn4565');
+
+update carro3 set
+carronome = 'hb20'
+where id = 4;
+ 
+select * from carro3;

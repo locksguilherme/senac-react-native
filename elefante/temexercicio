@@ -1,0 +1,30 @@
+create table tem(
+	idcarro int NOT NULL,
+	idpessoa int NOT NULL,
+	foreign key (idcarro) references carro3(id),
+	foreign key (idpessoa) references cliente3(id)
+);
+
+insert into tem(idcarro,idpessoa)
+values(2,1);
+
+insert into tem(idcarro,idpessoa)
+values(4,2);
+
+insert into tem(idcarro,idpessoa)
+values(2,1);
+
+select cc.nome, ca.placa, ca.carronome
+from carro3 ca, cliente3 cc
+where cc.id = ca.id
+and cc.id = 1;
+
+delete from tem where idpessoa = '1';
+
+select cc.nome, ca.placa, ca.carronome
+from carro3 ca, cliente3 cc, cliente3 cl
+where cc.id = ca.id
+and cc.id = cl.id;
+
+
+

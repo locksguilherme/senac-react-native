@@ -1,0 +1,13 @@
+create table funcionario(
+	id serial primary key,
+	nome varchar(500),
+	gerente int,
+	foreign key (gerente) references funcionario(id)
+);
+
+insert into funcionario(nome,gerente)
+values('cleber', 2);
+
+select ff.nome as Funcionario,fg.nome as Gerente
+from funcionario ff, funcionario fg
+where ff.gerente = fg.id;

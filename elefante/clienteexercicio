@@ -1,0 +1,19 @@
+create table cliente3(
+	nome varchar(100),
+	id serial primary key
+);
+
+insert into cliente3(nome)
+values('jonas');
+
+insert into cliente3(nome)
+values('jao');
+ 
+insert into cliente3(nome)
+values('antony');
+ 
+insert into cliente3(nome)
+values('guilherme');
+ 
+ 
+select * from cliente3;

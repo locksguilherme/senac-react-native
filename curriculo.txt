@@ -1,0 +1,9 @@
+1ª coisa: nome, com fonte acima de 
+2ª coisa: telefone(s)
+3ª coisa: email/linkedin
+- Objetivo
+- Formação(curso-entidade(escola)-ano concluido) ou (curso-andamento)- do mais recente ao mais antigo
+- Cursos/Certificações(nome do curso em seguida da trilha(Matérias do curso)
+- Experiências -  da mais antiga a mais recente
+- Sobre mim
+- Outros conhecimentos e informações
