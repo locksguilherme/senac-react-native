@@ -1,0 +1,10 @@
+Origem da contabilidade: frei luca pacioli, toscana Itália, 1494. Originalizou a ideia de credito e debito. Contabilidade por Partidas Dobradas.
+Ferramente utilizada para controlar o capital de giro é o fluxo de caixa.
+Balanço Patrimonial é um relatório que demonstra de maneira clara e precisa a situação financeira de uma empresa. Para isso, são considerados todos os ativos e passivos de um negócio, ou seja, seus bens, dívidas e lucros.
+Valor nominal: valor bruto
+Valor real: valor liquido
+Ativos = bens + direitos
+Passivos = Obrigações com primeiros e/ou terceiros
+Patrimônio liquido = ativos - passivos
+A diferença entre passivos e ativos tem que ser sempre de 0
+DRE = medição da capacidade de geração de caixa
