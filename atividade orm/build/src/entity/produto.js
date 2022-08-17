@@ -9,36 +9,36 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.User = void 0;
+exports.Produto = void 0;
 var typeorm_1 = require("typeorm");
-var profile_1 = require("./profile");
-var User = /** @class */ (function () {
-    function User() {
+var categoria_1 = require("./categoria");
+var Produto = /** @class */ (function () {
+    function Produto() {
     }
     __decorate([
         (0, typeorm_1.PrimaryGeneratedColumn)(),
         __metadata("design:type", Number)
-    ], User.prototype, "id", void 0);
+    ], Produto.prototype, "id", void 0);
     __decorate([
         (0, typeorm_1.Column)(),
         __metadata("design:type", String)
-    ], User.prototype, "nome", void 0);
+    ], Produto.prototype, "Descricao", void 0);
     __decorate([
         (0, typeorm_1.Column)(),
         __metadata("design:type", String)
-    ], User.prototype, "email", void 0);
+    ], Produto.prototype, "preco", void 0);
     __decorate([
         (0, typeorm_1.Column)(),
         __metadata("design:type", Number)
-    ], User.prototype, "idade", void 0);
+    ], Produto.prototype, "estoque", void 0);
     __decorate([
-        (0, typeorm_1.OneToOne)(function () { return profile_1.Profile; }),
-        (0, typeorm_1.JoinColumn)({ name: "id_profile" }),
-        __metadata("design:type", profile_1.Profile)
-    ], User.prototype, "profile", void 0);
-    User = __decorate([
-        (0, typeorm_1.Entity)("tb_user")
-    ], User);
-    return User;
+        (0, typeorm_1.OneToOne)(function () { return categoria_1.Categoria; }),
+        (0, typeorm_1.JoinColumn)({ name: "id_categoria" }),
+        __metadata("design:type", categoria_1.Categoria)
+    ], Produto.prototype, "profile", void 0);
+    Produto = __decorate([
+        (0, typeorm_1.Entity)("produto")
+    ], Produto);
+    return Produto;
 }());
-exports.User = User;
+exports.Produto = Produto;

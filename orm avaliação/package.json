@@ -1,0 +1,23 @@
+{
+    "name": "orm",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "dependencies": {
+      "express": "^4.18.1",
+      "nodemon": "^2.0.19",
+      "pg": "^8.7.3",
+      "postgres": "^3.2.4",
+      "typescript": "^4.7.4",
+      "typeorm": "^0.3.7"
+    },
+    "devDependencies": {},
+    "scripts": {
+      "test": "echo \"Error: no test specified\" && exit 1",
+      "start":"nodemon ./build/src/index.js"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC"
+  }
+  
