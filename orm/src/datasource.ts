@@ -1,12 +1,9 @@
 
 import { DataSource } from "typeorm"
-import { Categoria } from "./entity/categoria"
-import { Photo } from "./entity/photo"
-import { Produto } from "./entity/produto"
-import { Profile } from "./entity/profile"
-import { User } from "./entity/User"
-import { Usuario} from "./entity/usuario"
-import { Question} from "./entity/questoes"
+import { Venda } from "./entity/venda"
+import { cliente } from "./entity/cliente"
+
+
 
 
 const dataSource = new DataSource({
@@ -16,7 +13,7 @@ const dataSource = new DataSource({
     username: "postgres",
     password: "123456",
     database: "postgres",
-    entities: [User,Profile, Categoria,Produto,Photo, Usuario, Question],
+    entities: [Venda,cliente],
     synchronize: true,
     logging: false,
 })
